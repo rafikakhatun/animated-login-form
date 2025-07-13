@@ -1,129 +1,135 @@
+/* Reset & base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(image/background-img.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(image/background-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
+/* Form container */
 .form-container {
-    width: 400px;
-    height: 500px;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 40px;
-    border:2px solid rgba(255, 255,255,0.3);
-    box-shadow:0 0 30px rgba(0,0,0,0.5);
+  width: 400px;
+  min-height: 520px; /* 🔧 use min-height instead of fixed height */
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Heading */
 h2 {
-    color: white;
-    text-transform: uppercase;
-    padding: 20px 0;
-    font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px 0;
+  font-size: 2rem;
 }
 
+/* Input group */
 .form-group {
-    position: relative;
-    width: 330px;
-    margin: 30px 0;
-    border-bottom: 2px solid white;
+  position: relative;
+  width: 330px;
+  margin: 30px 0 50px; /* 🔧 extra bottom margin for error message */
+  border-bottom: 2px solid white;
 }
-
 
 .form-group input {
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1.2rem;
-    color: white;
-    padding: 0 30px 0 10px;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: white;
+  padding: 0 30px 0 10px;
 }
 
 .form-group label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    font-size: 1.2em;
-    color: white;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: white;
+  pointer-events: none;
+  transition: 0.3s ease;
 }
 
-input:focus~label,
-input:valid~label {
-
-    top: -5px;
-    transition: 0.5s;
+input:focus ~ label,
+input:valid ~ label {
+  top: -5px;
+  font-size: 0.9em;
+  color: #ccc;
 }
 
+/* Icons */
 .form-group i {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    font-size: 1.2em;
-    color: white;
-
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: white;
 }
 
+/* Error message */
+.error-message {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  font-size: 0.9em;
+  color: #ff4d4d;
+  line-height: 1.2;
+}
+
+/* Paragraphs & links */
 p {
-    text-align: center;
-    color: white;
-    padding: 10px 0;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
 }
 
-p>a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
+p > a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-p>a:hover {
-    text-decoration: underline;
-    font-style: italic;
+p > a:hover {
+  text-decoration: underline;
+  font-style: italic;
 }
 
+/* Submit button */
 #btn {
-    width: 100%;
-    height: 50px;
-    border-radius: 40px;
-    border: none;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 10px 0;
-    margin: 10px 0;
-    cursor: pointer;
-    transition: 0.5s;
-
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 #btn:hover {
-    background: rgba(0, 0, 0, 0.3);
-    color: white;
-}
-
-.error-message {
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  font-size: 0.9em;
-  color: #ff4d4d; 
-  line-height: 1.2;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
 }
