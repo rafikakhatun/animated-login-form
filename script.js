@@ -5,7 +5,7 @@ const passwordError = document.getElementById("password-error");
 const loginBtn = document.getElementById("btn");
 
 loginBtn.addEventListener("click", function () {
-  // Step 1: clear old messages
+     // Step 1: clear old messages
   emailError.textContent = "";
   passwordError.textContent = "";
 
@@ -28,6 +28,8 @@ loginBtn.addEventListener("click", function () {
     passwordError.textContent = "Minimum 6 characters.";
     valid = false;
   }
+  
+
 
   
 });
