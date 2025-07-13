@@ -1,55 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <!--font awesome cdn link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body>
-    <div class="form-container">
-        <h2>login</h2>
-        <form action="">
-            <div class="form-group">
-                <input type="email" required>
-                <label for="">Email</label>
-                <i class="fa-solid fa-envelope"></i>
-            </div>
+  <div class="form-container">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <input type="email" id="email" required />
+        <label for="email">Email</label>
+        <i class="fa-solid fa-envelope"></i>
+        <span class="error-message" id="email-error"></span>
+      </div>
 
-            <div class="form-group">
-                <input type="password" required>
-                <label for="">Password</label>
-                <i class="fa-solid fa-lock"></i>
-            </div>
+      <div class="form-group">
+        <input type="password" id="password" required />
+        <label for="password">Password</label>
+        <i class="fa-solid fa-lock"></i>
+        <span class="error-message" id="password-error"></span>
+      </div>
 
-            <p><input type="checkbox" >Remenber Me
-                <a href="#">Forgot Password</a>
-            </p>
+      <p>
+        <input type="checkbox" /> Remember Me
+        <a href="#">Forgot Password</a>
+      </p>
 
-            <input id="btn" type="button" value="login">
+      <input id="btn" type="button" value="Login" />
 
-            <p>Don't have not account?
-                <a href="#">Register</a>
-            </p>
+      <p>Don't have an account?
+        <a href="#">Register</a>
+      </p>
+    </form>
+  </div>
 
-
-
-
-
-        </form>
-    </div>
-
-
-
-
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
