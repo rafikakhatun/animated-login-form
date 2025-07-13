@@ -28,7 +28,18 @@ loginBtn.addEventListener("click", function () {
     passwordError.textContent = "Minimum 6 characters.";
     valid = false;
   }
-  
+
+  if (valid) {
+    Swal.fire({
+      icon: "success",
+      title: "Login Successful",
+      text: `Welcome, ${email.value.split('@')[0]}!`,
+    });
+
+    email.value = "";
+    password.value = "";
+  }
+
 
 
   
